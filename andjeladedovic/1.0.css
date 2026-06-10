@@ -1,0 +1,480 @@
+/* =========================
+   GLOBAL RESET + THEME
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #e6f2ed, #f3f0ff);
+    color: #222;
+    font-family: Arial, sans-serif;
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+
+h1, h2 {
+    font-family: Georgia, serif;
+}
+
+p {
+    line-height: 1.7;
+}
+
+/* =========================
+   HEADER + NAV (PREMIUM)
+========================= */
+
+header {
+    background: linear-gradient(90deg, #3a0ca3, #4361ee);
+    color: white;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+header h1 {
+    font-size: 2.4rem;
+}
+
+/* NAVIGATION */
+nav ul.meni {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: rgba(67, 97, 238, 0.9);
+    backdrop-filter: blur(10px);
+}
+
+nav ul.meni li {
+    margin: 5px;
+}
+
+nav ul.meni li a {
+    display: block;
+    padding: 12px 18px;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+nav ul.meni li a:hover {
+    background: #4cc9f0;
+    transform: translateY(-2px);
+}
+
+/* =========================
+   CONTAINERS (CARDS STYLE)
+========================= */
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+.sadrzaj, .uvod {
+    background: white;
+    padding: 25px;
+    margin: 20px auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.sadrzaj:hover, .uvod:hover {
+    transform: translateY(-3px);
+}
+
+/* =========================
+   IMAGES
+========================= */
+
+img {
+    max-width: 100%;
+    border-radius: 12px;
+}
+
+.slikalevo {
+    float: left;
+    width: 300px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.slikauvod {
+    margin-top: 15px;
+}
+
+/* =========================
+   VIDEO
+========================= */
+
+video {
+    width: 100%;
+    border-radius: 12px;
+    margin-top: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* =========================
+   HIGHLIGHT TEXT
+========================= */
+
+.istaknuto, .naglaseno, #teorija {
+    color: #d90429;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* =========================
+   MANDELA / GRID FIX
+========================= */
+
+.glavni-sadrzaj {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.kolona {
+    flex: 1 1 45%;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+/* =========================
+   GALERIJA (FIXED)
+========================= */
+
+.galerija {
+    display: inline-block;
+    margin: 10px;
+    width: 180px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.galerija img {
+    width: 100%;
+    display: block;
+    transition: 0.3s;
+}
+
+.galerija:hover img {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+/* IMPORTANT: fix global image opacity bug */
+img {
+    opacity: 1 !important;
+}
+
+/* =========================
+   FORMA (PREMIUM)
+========================= */
+
+form {
+    max-width: 600px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+    background: #3a0ca3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+input[type="submit"]:hover {
+    background: #4361ee;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #3a0ca3;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+/* =========================
+   AUTH (LOGIN / REGISTER)
+========================= */
+
+.auth-body {
+    background: linear-gradient(135deg, #3a0ca3, #4361ee);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.auth-container {
+    background: white;
+    padding: 40px;
+    width: 350px;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    text-align: center;
+    animation: pop 0.5s ease;
+}
+
+@keyframes pop {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.auth-container h2 {
+    margin-bottom: 20px;
+    color: #3a0ca3;
+}
+
+.auth-container input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.auth-container input:focus {
+    border-color: #4361ee;
+    box-shadow: 0 0 8px rgba(67,97,238,0.3);
+}
+
+.auth-container button {
+    width: 100%;
+    padding: 12px;
+    background: #3a0ca3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.auth-container button:hover {
+    background: #4361ee;
+    transform: translateY(-2px);
+}
+
+.auth-container a {
+    color: #3a0ca3;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.error {
+    color: red;
+    margin-bottom: 10px;
+}
+
+.success {
+    color: green;
+    margin-bottom: 10px;
+}
+.galerija {
+    width: 220px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    background: white;
+}
+
+.galerija img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.galerija .desc {
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.galerija:hover {
+    transform: scale(1.05);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+}
+
+form input, form textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    padding: 12px;
+    background: #3a0ca3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #4361ee;
+}
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+.sadrzaj {
+    background: #ffffff;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+button {
+    background: #3a0ca3;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #4361ee;
+}
+/* BACKGROUND */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* CENTRIRANJE */
+.result-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background: linear-gradient(135deg, #3a0ca3, #4361ee);
+}
+
+/* KARTICA */
+.result-card {
+    background: white;
+    color: #333;
+    padding: 40px;
+    border-radius: 20px;
+    width: 420px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    animation: pop 0.4s ease;
+}
+
+/* ANIMACIJA */
+@keyframes pop {
+    from { transform: scale(0.85); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* NASLOV */
+.result-card h1 {
+    color: #3a0ca3;
+    margin-bottom: 15px;
+}
+
+/* BADGE */
+.badge {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 50px;
+    background: #4361ee;
+    color: white;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+/* SCORE */
+.score {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* OPIS */
+.desc {
+    font-size: 14px;
+    color: #555;
+}
+
+/* DUGMAD */
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.buttons a {
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: #3a0ca3;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #4361ee;
+}
+
+.btn-secondary {
+    background: #f1f1f1;
+    color: #333;
+}
+
+.btn-secondary:hover {
+    background: #ddd;
+}

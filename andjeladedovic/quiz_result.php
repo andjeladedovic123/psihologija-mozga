@@ -31,7 +31,6 @@ $conn->query("
 <head>
     <meta charset="UTF-8">
     <title>Rezultat kviza</title>
-
     <link rel="stylesheet" href="1.0.css">
 </head>
 
@@ -60,13 +59,9 @@ $conn->query("
         </p>
 
         <div class="buttons">
-
             <a href="quiz.php" class="btn-primary">🔁 Ponovi kviz</a>
-
             <a href="dashboard.php" class="btn-secondary">📊 Dashboard</a>
-
             <a href="profil.php" class="btn-secondary">👤 Moj profil</a>
-
         </div>
 
     </div>
@@ -75,3 +70,4 @@ $conn->query("
 
 </body>
 </html>
+
